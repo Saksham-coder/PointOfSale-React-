@@ -12,6 +12,7 @@ import Receipts from './components/dashboard/Receipts'
 import Dashboard from './components/dashboard/Dashboard'
 import Products from './components/dashboard/Products'
 import Navbar from './components/Navbar'
+import Finalsell from './components/dashboard/Sell/Finalsell'
 import './App.css';
 
 
@@ -30,14 +31,13 @@ const  App= () => {
         <Switch>
           <div>
                 <Route exact path="/app/sell" component={Sell} />
+                <Route exact path='/app/sell/final' component={Finalsell} />
                 <Route exact path="/app/receipts" component={Receipts} />
                 <Route exact path="/app/dashboard" component={Dashboard} />
                 <Route exact path="/app/products" component={Products} />
                 <Route exact path='/' component={Main}/>
                 <Route exact path="/signup" component={Signup} />
                 <Route exact path="/login" component={Login} />
-                
-
           </div>
         </Switch>
       </Router>
