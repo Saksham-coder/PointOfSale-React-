@@ -1,3 +1,45 @@
+import axios from 'axios'
+import {loadUser} from './auth'
+// import {Redirect} from 'react-router-redux'
+
+
+export const postingfinal = (profile,userId) =>async dispatch => {
+    try{
+        const d =  new Date().toLocaleString()
+        profile.User =  userId
+        profile.date = d
+        console.log(profile)
+        const config = {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }
+
+        const body = profile
+
+        const res = await axios.post("/api/v1/sell",
+            body,
+            config
+        )
+
+        console.log(res)
+        console.log("user loaded ")
+        dispatch(loadUser())
+        console.log("did user loaded ")
+        // <Redirect to = "/app/sell" />s
+        // history.pushState('/app')
+        // if (res.data.status === 'success'){
+        //     dispatch(loadUser())
+        //     // return Redirect('/app/sell')
+        //     render(){
+        //         return <Redirect to = '/app/sell' />
+        //     }
+        // }
+    }catch(err){
+        console.log(err)
+    }
+}
+
 export const pushing = ({detail, price} ) => dispatch => {
     try{
         

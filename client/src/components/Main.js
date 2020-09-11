@@ -1,9 +1,12 @@
 import React from 'react'
-import {Link, Switch } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import Login  from './auth/Login'
 import Signup  from './auth/Signup'
 import Dashboard from './dashboard/Dashboard'
+import Sell from './dashboard/Sell'
+import Navbar from './Navbar'
+import {Redirect} from 'react-router-dom'
 
 
 const Main = ({isAuthenticated}) => {
@@ -11,7 +14,9 @@ const Main = ({isAuthenticated}) => {
     return (
             <div>
             {
-                isAuthenticated ?  <Dashboard />
+                isAuthenticated ? <div>
+                 <Redirect to='./app/dashboard' />
+                </div>
                 :<div><p>Auth component</p>
                 <Link to='/login'  >Login</Link>  
                 <Link to='/signup' >Signup</Link> 

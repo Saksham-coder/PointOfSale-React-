@@ -95,7 +95,7 @@ exports.auth =  (req, res, next) =>{
 exports.getUser= async(req, res) => {
   try {
     // console.log(req.id)
-      const user = await User.findById(req.id).select('-password').populate('products');
+      const user = await User.findById(req.id).select('-password').populate('products sold');
       res.json(user);
   } catch (err) {
       console.error(err.message);

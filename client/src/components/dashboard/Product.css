@@ -1,0 +1,43 @@
+.product{
+    flex: 1;
+    background-color: #EBEEF0;
+}
+
+/* .product_base{
+    background-color: white;
+    padding: 15px;
+} */
+
+.product_base_search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+    height: 40px;
+    background-color: white;
+    padding: 10px;
+}
+
+
+.product_base_search input{
+    flex: 1;
+    height: 100%;
+    /* border-left: none; */
+    border: 1px solid #EBEEF0;
+    border-left: none;
+}
+
+.product_base_search svg{
+    /* padding: 4px; */
+    border: 1px solid #EBEEF0;
+    color: #EBEEF0;
+    background-color: white;
+    height: 100%;
+}
+
+.product_base_display{
+    background-color: white;
+    margin: 15px;
+    margin-top: -15px;
+    padding-top: 15px ;
+}

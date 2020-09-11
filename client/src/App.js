@@ -14,6 +14,8 @@ import Products from './components/dashboard/Products'
 import Navbar from './components/Navbar'
 import Finalsell from './components/dashboard/Sell/Finalsell'
 import './App.css';
+import {connect} from 'react-redux'
+import PrivateRoute from './components/routing/PrivateRoute'
 
 
 const  App= () => {
@@ -26,23 +28,26 @@ const  App= () => {
   return (
     <Provider store={store}>
       <Router>
-        <Navbar/>
-
         <Switch>
           <div>
-                <Route exact path="/app/sell" component={Sell} />
-                <Route exact path='/app/sell/final' component={Finalsell} />
-                <Route exact path="/app/receipts" component={Receipts} />
-                <Route exact path="/app/dashboard" component={Dashboard} />
-                <Route exact path="/app/products" component={Products} />
+            <div>
+                <PrivateRoute exact path="/app/sell" component={Sell} />
+                <PrivateRoute exact path='/app/sell/final' component={Finalsell} />
+                <PrivateRoute exact path="/app/receipts" component={Receipts} />
+                <PrivateRoute exact path="/app/dashboard" component={Dashboard} />
+                <PrivateRoute exact path="/app/products" component={Products} />
+            </div>
+            <div>
                 <Route exact path='/' component={Main}/>
                 <Route exact path="/signup" component={Signup} />
                 <Route exact path="/login" component={Login} />
+            </div>
           </div>
         </Switch>
       </Router>
     </Provider>
   );
 }
+
 
 export default App;

@@ -1,0 +1,37 @@
+.productdisplay_heading{
+    padding: 15px;
+}
+
+.productdisplay_headingmain{
+    display: flex;
+    border-bottom: 1px solid #EBEEF0;
+    padding-bottom: 10px;
+}
+
+.productdisplay_headingmain p{
+    flex: 0.2;
+    color: rgba(0, 0, 255, 0.534);
+    font-weight: bold;
+}
+
+.productdisplaycard{
+    display: flex;
+    border-bottom: 1px solid #EBEEF0;
+    padding: 5px 0px;
+}
+
+
+.productdisplaycard:hover{
+    background-color: #EBEEF0; 
+    cursor: pointer;
+}
+
+
+.productdisplaycard p{
+    flex: 0.2;
+}
+
+.productdisplaycard p:nth-child(1){
+    color:  rgba(0, 0, 255, 0.534);
+}
+

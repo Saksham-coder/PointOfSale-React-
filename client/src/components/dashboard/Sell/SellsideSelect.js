@@ -1,6 +1,7 @@
 import React from 'react'
 import Sell from '../Sell'
 import {connect} from 'react-redux'
+import './SellsideSelect.css'
 
 import {filtering2, filtering3} from './../../../actions/auth'
 
@@ -18,7 +19,7 @@ const SellsideSelect = ({list, products, filtering2, filtering3}) => {
     }
 
     return (
-        <div>
+        <div className='sellsideselect'>
             <p onClick={filterall}>All</p>
             {
                 list.map(single => {

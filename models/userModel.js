@@ -41,6 +41,12 @@ userSchema.virtual('products', {
 	localField: '_id'
 })
 
+userSchema.virtual('sold', {
+	ref:'Sell',
+	foreignField: 'User',
+	localField: '_id'
+})
+
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;

@@ -1,5 +1,15 @@
-.sellitemcard{
-    margin: 1px solid black;
-    background-color: aqua;
-    width: 70px;
+.sellitemcard_info{
+    margin: 1px ;
+    background-color:  #EBEEF0;
+    width: 100px;
+    text-align: center;
+    padding: 20px 0px;
+    border: 0.5px solid  #EBEEF0;
+    border-bottom: 2.5px solid #4DB6AC;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.sellitemcard_info:hover{
+    background-color: white;
 }

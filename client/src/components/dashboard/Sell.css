@@ -1,0 +1,39 @@
+.route_flex{
+    display: flex;
+}
+
+.sell{
+    flex: 1;
+    background-color: #EBEEF0;
+    height: 100vh;
+}
+
+.sell_heading{
+    background-color: white;
+    padding:15px;
+    color: #808080;
+}
+
+.sell_bottom{
+    display: flex;
+}
+
+.sell_bottom1{
+    flex: 0.6;
+    padding: 15px;
+    background-color: white;
+    margin: 15px;
+    margin-right: -15px;
+}
+
+.sell_bottom1a{
+    border-right: 0.5px solid #EBEEF0;
+    display: flex;
+}
+
+.sell_bottom2{
+    flex: 0.4;
+    padding: 15px;
+    background-color: white;
+    margin: 15px;
+}

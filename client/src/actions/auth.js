@@ -15,6 +15,10 @@ export const loadUser = () => async dispatch => {
           type:"PRODUCT_LOADED",
           payload: res.data
       })
+      dispatch({
+          type:"PRODUCTS_LOADED",
+          payload: res.data
+      })
     } catch (err) {
       dispatch({
         type: "AUTH_ERROR"
@@ -51,7 +55,7 @@ export const login = (email, password) => async dispatch => {
             payload: res.data
           });
       
-          dispatch(loadUser());
+        dispatch(loadUser());
 
     }catch(err){
         console.log("error==>>>", err)

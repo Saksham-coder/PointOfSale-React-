@@ -1,0 +1,7 @@
+.sellsideselect p{
+    padding: 5px;
+    color: rgba(0, 0, 255, 0.616);
+    border-right: 1px solid #EBEEF0;
+    border-bottom: 1px solid #EBEEF0;
+    /* text-transform: capitalize; */
+}

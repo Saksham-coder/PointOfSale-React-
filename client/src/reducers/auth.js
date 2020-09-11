@@ -1,7 +1,8 @@
 const initialState = {
     isAuthenticated: false,
     user: null,
-    copyProduct: []
+    copyProduct: [],
+    productloaded:false
 }
 
 export default function(state= initialState, action){
@@ -25,7 +26,8 @@ export default function(state= initialState, action){
             console.log("pAuylod in product loading==>>", payload)
             return{
                 ...state,
-                copyProduct: payload.products
+                copyProduct: payload.products,
+                productloaded:true
             }
         case "AUTH_ERROR":
             return{

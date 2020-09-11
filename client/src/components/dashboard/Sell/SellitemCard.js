@@ -12,7 +12,7 @@ const SellitemCard = ({detail, price, pushing}) => {
     }
 
     return (
-        <div onClick={push} className='sellitemcard'>
+        <div onClick={push} className='sellitemcard_info'>
             <p>{detail}</p>
             <p>{price}</p>
         </div>

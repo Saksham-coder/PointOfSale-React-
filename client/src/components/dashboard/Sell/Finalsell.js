@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Redirect } from 'react-router-dom'
 
 import CheckIcon from '@material-ui/icons/Check';
 
 import FinalsellRight from './FinalsellRight'
-import {customer} from './../../../actions/profile'
+import {customer,postingfinal} from './../../../actions/profile'
 
-const Finalsell = ({paymentType,customer,revenue}) => {
+const Finalsell = ({paymentType,customer,userId,revenue,profile,postingfinal}) => {
 
     console.log(paymentType)
 
@@ -19,6 +20,14 @@ const Finalsell = ({paymentType,customer,revenue}) => {
     const rev = (e) => {
         console.log(e.target.name)
         customer({revenue:e.target.name})
+    }
+
+    const final = () => {
+        postingfinal(profile,userId)
+
+        // if (isAuthenticated) {
+        //     return <Redirect to="/" />;
+        //   }
     }
 
     return (
@@ -65,6 +74,10 @@ const Finalsell = ({paymentType,customer,revenue}) => {
                 }
             </div>
 
+            <div>
+                <button onClick={final}> Received {profile.total} </button>
+            </div>
+
             <FinalsellRight/>
         </div>
     )
@@ -72,8 +85,10 @@ const Finalsell = ({paymentType,customer,revenue}) => {
 
 const mapStateToProps = (state) => ({
     paymentType:state.profile.customer.paymentType,
-    revenue:state.profile.revenue
+    revenue:state.profile.revenue,
+    profile:state.profile,
+    userId:state.auth.user._id
 })
 
 
-export default connect(mapStateToProps, {customer})(Finalsell)
+export default connect(mapStateToProps, {customer,postingfinal})(Finalsell)

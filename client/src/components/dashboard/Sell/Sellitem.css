@@ -1,0 +1,22 @@
+.sellitem{
+    flex: 1;
+}
+
+.selliteminput{
+    flex: 1;
+    padding: 10px;
+}
+
+.selliteminput input{
+    width: 100%;
+    height: 30px;
+    border: 1px solid #EBEEF0;
+    color: #6b7780 ;
+    text-align: left;
+}
+
+.sellitemcard{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
