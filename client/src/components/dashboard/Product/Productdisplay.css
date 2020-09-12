@@ -27,11 +27,22 @@
 }
 
 
-.productdisplaycard p{
+.productdisplaycard a{
+    display: flex;
+    flex: 1;
+    text-decoration: none;
+    color: black;
+}
+
+.productdisplaycard a p{
     flex: 0.2;
 }
 
-.productdisplaycard p:nth-child(1){
+.productdisplaycard a p:nth-child(1){
     color:  rgba(0, 0, 255, 0.534);
 }
 
+.productdisplay_headingmain  p:nth-child(5){
+    display: flex;
+    align-items: center;
+}

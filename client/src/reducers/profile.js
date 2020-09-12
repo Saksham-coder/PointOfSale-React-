@@ -19,6 +19,7 @@ export default function(state= initialState, action){
     const {type, payload} = action;
 
     switch(type) {
+        
         case "ADD_ITEM":
             const index = state.items.findIndex(el => el.details === payload.details)
             console.log(index)

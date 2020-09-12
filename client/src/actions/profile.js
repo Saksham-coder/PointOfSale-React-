@@ -1,6 +1,7 @@
 import axios from 'axios'
 import {loadUser} from './auth'
-// import {Redirect} from 'react-router-redux'
+import history from './../components/history'
+
 
 
 export const postingfinal = (profile,userId) =>async dispatch => {
@@ -22,7 +23,7 @@ export const postingfinal = (profile,userId) =>async dispatch => {
             config
         )
 
-        console.log(res)
+        console.log(res) 
         console.log("user loaded ")
         dispatch(loadUser())
         console.log("did user loaded ")
@@ -35,6 +36,7 @@ export const postingfinal = (profile,userId) =>async dispatch => {
         //         return <Redirect to = '/app/sell' />
         //     }
         // }
+        history.push('/app/sell')
     }catch(err){
         console.log(err)
     }

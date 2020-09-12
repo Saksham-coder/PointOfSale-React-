@@ -1,5 +1,5 @@
 import React ,{useEffect} from 'react';
-import {BrowserRouter as Router, Route, Switch,Link } from 'react-router-dom'
+import {BrowserRouter , Router, Route, Switch,Link } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import store from './store/store'
 import {loadUser} from './actions/auth'
@@ -13,9 +13,13 @@ import Dashboard from './components/dashboard/Dashboard'
 import Products from './components/dashboard/Products'
 import Navbar from './components/Navbar'
 import Finalsell from './components/dashboard/Sell/Finalsell'
+import ProductDetail from './components/dashboard/Product/ProductDetail'
 import './App.css';
 import {connect} from 'react-redux'
 import PrivateRoute from './components/routing/PrivateRoute'
+import history from './components/history'
+
+
 
 
 const  App= () => {
@@ -27,7 +31,8 @@ const  App= () => {
 
   return (
     <Provider store={store}>
-      <Router>
+    <BrowserRouter>
+      <Router history={history}>
         <Switch>
           <div>
             <div>
@@ -36,6 +41,7 @@ const  App= () => {
                 <PrivateRoute exact path="/app/receipts" component={Receipts} />
                 <PrivateRoute exact path="/app/dashboard" component={Dashboard} />
                 <PrivateRoute exact path="/app/products" component={Products} />
+                <PrivateRoute exact path="/app/products/:id" component={ProductDetail} />
             </div>
             <div>
                 <Route exact path='/' component={Main}/>
@@ -45,6 +51,7 @@ const  App= () => {
           </div>
         </Switch>
       </Router>
+      </BrowserRouter>
     </Provider>
   );
 }

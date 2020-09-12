@@ -1,6 +1,7 @@
 const initialState = {
     products: [],
-    ordering: "desc"
+    ordering: "desc",
+    singleproduct: {}
 }
 
 export default function(state= initialState, action){
@@ -14,6 +15,12 @@ export default function(state= initialState, action){
                 products:payload.products,
                 ordering: state.ordering === 'desc' ? "asc" : "desc"
             }
+            case "LOAD_PRODUCT":
+                console.log(payload)
+                return{
+                    ...state,
+                    singleproduct:payload.data
+                }
         default:
         return state
     }
