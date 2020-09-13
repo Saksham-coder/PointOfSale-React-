@@ -138,3 +138,51 @@ export const decreasingPage = ({sold}) => dispatch => {
         console.log(err)
     }
 }
+
+export const calculations = ({sold, data}) => dispatch => {
+    try{
+
+        let { filterDate, swiggy, zomato, foodpanda, store } = data
+
+    let date = filterDate
+    console.log(date)
+
+    let d = new Date().toLocaleString()
+
+    let soldData = []
+
+    sold.map(s => {
+        if (s.date){
+            let date2 = s.date.split(" ")
+            console.log(d.split(" ")[0] , date2[0])
+            if (d.split(" ")[0] === date2[0]){
+                console.log("matched")
+                soldData.push(s)
+            }
+        }
+    })
+
+    // console.log("Filter sodl data =+=>>>", soldData)
+
+    var grouped = _.groupBy(soldData, function(s) {
+        return s.revenue;
+    });
+      
+    // console.log(grouped);
+      
+    foodpanda =   _.sumBy(grouped.Foodpanda, x => x.total)
+    swiggy =   _.sumBy(grouped.Swiggy, x => x.total)
+    zomato =   _.sumBy(grouped.Zomato, x => x.total)
+    store =   _.sumBy(grouped.Store, x => x.total)
+    console.log(foodpanda,swiggy,zomato,store)
+    dispatch({
+        type:"UPDATE_TODAYSALES",
+        payload:{
+            foodpanda,swiggy,zomato,store
+        }
+    })
+       
+    }catch(err){
+        console.log(err)
+    }
+}

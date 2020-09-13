@@ -1,0 +1,39 @@
+.dashboardrevenue{
+    flex: 1;
+    display: flex;   
+    padding: 15px;
+}
+
+.dashboardrevenue_card{
+    flex: 0.2;
+    background-color: #31373D;
+    padding: 15px;
+    color: white;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.dashboardrevenue_card:hover{
+    -webkit-box-shadow: 0px 0px 12px -1px rgba(16,44,255,0.85); 
+    box-shadow: 0px 0px 12px -1px rgba(16,44,255,0.85);
+}
+
+
+.dashboardrevenue_card_header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.dashboardrevenue_card_header img{
+    width: 40px;
+    height: auto;
+    /* background-color: white; */
+}
+
+.dashboardrevenue_card_header svg{
+    width: 40px;
+    height: auto;
+    color: white;
+    /* background-color: white; */
+}

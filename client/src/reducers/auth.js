@@ -2,7 +2,8 @@ const initialState = {
     isAuthenticated: false,
     user: null,
     copyProduct: [],
-    productloaded:false
+    productloaded:false,
+    filterDate: "today"
 }
 
 export default function(state= initialState, action){
