@@ -1,0 +1,115 @@
+.receiptdetail{
+    flex: 1;
+    background-color: #EBEEF0;
+}
+
+.receiptdetail_heading{
+    background-color: white;
+    padding:15px;
+    color: #808080;
+}
+
+.receiptdetail_base{
+    display: flex;
+}
+
+.receiptdetail_base_left{
+    flex: 0.4;
+    padding: 60px;
+}
+
+.receiptdetail_base_left h4{
+    margin-bottom: 10px;
+}
+
+.receiptdetail_base_left span{
+    color: #6d6767;
+}
+
+.receiptdetail_base_right{
+    flex: 0.6;
+    margin: 40px;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.receiptdetail_base_right_first{
+    display: flex;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #EBEEF0 ;
+}
+
+.receiptdetail_base_right_first p{
+    margin-right: 10px;
+}
+
+.receiptdetail_base_right_first p:nth-child(1){
+    font-weight: 600;
+}
+
+.receiptdetail_base_right_first p:nth-child(2){
+    background-color: #008CBA;
+    color: white;
+    padding: 0 5px;
+}
+
+.receiptdetail_base_right_first p:nth-child(3){
+    background-color: #43AC6A;
+    color: white;
+    padding: 0 5px;
+}
+
+.receiptdetail_base_right_second{
+    display: flex;
+    font-weight: 600;
+    padding-top: 10px;
+    padding-bottom:10px ;
+    border-bottom: 1px solid #EBEEF0 ;
+}
+
+.receiptdetail_base_right_second p{
+    flex: 0.25;
+}
+
+.receiptdetail_base_right_third{
+    display: flex;
+    padding-top: 10px;
+    padding-bottom:10px ;
+    border-bottom: 1px solid #EBEEF0 ;
+}
+
+.receiptdetail_base_right_third p{
+    flex: 0.25;
+}
+
+.receiptdetail_base_right_fourth{
+    margin-top: 5px;
+}
+
+.receiptdetail_base_right_fourth,
+.receiptdetail_base_right_fifth{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.receiptdetail_base_right_fourth p,
+.receiptdetail_base_right_fourth span,
+.receiptdetail_base_right_fifth p,
+.receiptdetail_base_right_fifth span
+{
+    flex: 0.25;
+}
+
+.receiptdetail_base_right_fourth p,
+.receiptdetail_base_right_fifth p,
+.receiptdetail_base_right_fifth span{
+    font-weight: 500;
+}
+
+.receiptdetail_base_right_sixth,
+.receiptdetail_base_right_seventh{
+    color: #6d6767;
+}

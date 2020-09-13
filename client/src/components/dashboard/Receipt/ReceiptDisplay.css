@@ -1,0 +1,60 @@
+.receiptdisplay{
+    display: flex;
+    flex-direction: column;
+}
+
+.receiptdisplay_base{
+    display: flex;
+    /* margin-bottom: 10px; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #EBEEF0;
+}
+
+.receiptdisplay_base p{
+    flex: 16.67;
+    padding-left: 10px;
+}
+
+
+.receiptdisplaycard{
+    display: flex;
+}
+
+.receiptdisplaycard p{
+    flex: 16.67;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    /* margin-bottom: 5px; */
+    border-bottom: 1px solid #EBEEF0;
+}
+
+.receiptdisplay_button{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.receiptdisplay_button button{
+    padding: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.disable_button{
+    cursor: not-allowed !important;
+}
+
+.receiptdisplaycard a{
+    flex: 1;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    margin: 0;
+}
+
+.receiptdisplaycard a:hover{
+    background-color:  #EBEEF0;
+}

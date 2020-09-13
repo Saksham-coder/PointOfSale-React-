@@ -11,6 +11,7 @@ const sellSchema = new mongoose.Schema({
     discount: Number,
     distype: String,
     total:Number,
+    revenue:String,
     customer:{
         paymentType:String,
         phone: String,

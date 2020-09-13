@@ -9,7 +9,7 @@ export const ProductDetail = (props) => {
     useEffect( () => {
         props.singleProductDetail({id:props.match.params.id})
     },[])
-
+ 
     const [formData, setFormData] = useState({
         detail: '',
         category: '',
@@ -35,7 +35,7 @@ export const ProductDetail = (props) => {
     return (
         <div className='product'>
            <div className='sell_heading'>
-                    <h2>Products</h2>
+                    <h2>Product</h2>
             </div>
         <div className='productdetail'>
             <div className='productdetail_left'>

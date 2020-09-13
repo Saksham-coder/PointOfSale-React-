@@ -3,6 +3,8 @@
     flex-direction: column;
     background-color: #31373D;
     height: 100vh;
+    position: sticky;
+    top: 0;
 }
 
 .navbar a{

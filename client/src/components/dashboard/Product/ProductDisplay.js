@@ -1,18 +1,23 @@
-import React, { Component,Link } from 'react'
+import React, { Component,Link, useEffect } from 'react'
 import { connect } from 'react-redux'
 import ProductDisplayCard from './ProductDisplayCard'
 import './Productdisplay.css'
-import {changeOrder} from './../../../actions/product'
+import {changeOrder, increasingPage} from './../../../actions/product'
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 
-export const ProductDisplay = ({products, ordering, changeOrder, singleProductDetail}) => {
+export const ProductDisplay = ({products, ordering, changeOrder,auth ,count ,  singleProductDetail}) => {
+
+    useEffect(()=> {
+        changeOrder(products, ordering)
+    },[auth])
 
     const order = () => {
         console.log("Change in asc. or desc. order", products)
         changeOrder(products, ordering)
     }
 
+   
     
 
     return (
@@ -36,13 +41,15 @@ export const ProductDisplay = ({products, ordering, changeOrder, singleProductDe
                         return <  ProductDisplayCard id={product._id} detail={product.details} category={product.category} price={product.price} />
                     })
                 }
+            
         </div>
     )
 }
 
 const mapStateToProps = (state) => ({
     products:state.product.products,
-    ordering:state.product.ordering
+    ordering:state.product.ordering,
+    auth:state.auth
 })
 
 

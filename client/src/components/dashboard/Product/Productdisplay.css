@@ -10,7 +10,7 @@
 
 .productdisplay_headingmain p{
     flex: 0.2;
-    color: rgba(0, 0, 255, 0.534);
+    color: #3191C5;
     font-weight: bold;
 }
 
@@ -39,7 +39,7 @@
 }
 
 .productdisplaycard a p:nth-child(1){
-    color:  rgba(0, 0, 255, 0.534);
+    color:  #3191C5;
 }
 
 .productdisplay_headingmain  p:nth-child(5){

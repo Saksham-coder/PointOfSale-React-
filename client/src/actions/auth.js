@@ -19,6 +19,13 @@ export const loadUser = () => async dispatch => {
           type:"PRODUCTS_LOADED",
           payload: res.data
       })
+    //   Data for sold or receipt by chronological order
+        // let newData =  _.reverse(res.data.sold)
+        // console.log(newData)
+      dispatch({
+        type:"RECEIPT_LOADED",
+        payload: res.data.sold
+    })
     } catch (err) {
       dispatch({
         type: "AUTH_ERROR"

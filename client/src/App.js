@@ -14,6 +14,7 @@ import Products from './components/dashboard/Products'
 import Navbar from './components/Navbar'
 import Finalsell from './components/dashboard/Sell/Finalsell'
 import ProductDetail from './components/dashboard/Product/ProductDetail'
+import ReceiptDetail from './components/dashboard/Receipt/ReceiptDetail'
 import './App.css';
 import {connect} from 'react-redux'
 import PrivateRoute from './components/routing/PrivateRoute'
@@ -42,6 +43,7 @@ const  App= () => {
                 <PrivateRoute exact path="/app/dashboard" component={Dashboard} />
                 <PrivateRoute exact path="/app/products" component={Products} />
                 <PrivateRoute exact path="/app/products/:id" component={ProductDetail} />
+                <PrivateRoute exact path="/app/receipts/:id" component={ReceiptDetail} />
             </div>
             <div>
                 <Route exact path='/' component={Main}/>

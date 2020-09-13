@@ -61,6 +61,20 @@ export const singleProductDetail = ({id}) => async dispatch => {
     }
 }
 
+export const singleReceiptDetail = ({id}) => async dispatch => {
+    try{
+        console.log("from action", id)
+        const res = await axios.get(`/api/v1/sell/${id}`)
+        console.log(res.data)
+        dispatch({
+            type:"LOAD_RECEIPT",
+            payload: res.data
+        })
+    }catch(err){
+        console.log(err)
+    }
+}
+
 export const updateSingleProductDetail = ({id, detail, category, price}) => async dispatch => {
     try{
         // console.log("from action", {detail, category, price})
@@ -90,6 +104,35 @@ export const updateSingleProductDetail = ({id, detail, category, price}) => asyn
         dispatch({
             type:"LOAD_PRODUCT",
             payload: res.data
+        })
+    }catch(err){
+        console.log(err)
+    }
+}
+
+
+export const increasingPage = ({sold}) => dispatch => {
+    try{
+        // console.log("From action", sold)
+        dispatch({
+            type:"NEXT_PAGE",
+            payload:{
+                sold
+            }
+        })
+    }catch(err){
+        console.log(err)
+    }
+}
+
+export const decreasingPage = ({sold}) => dispatch => {
+    try{
+        console.log("From action", sold)
+        dispatch({
+            type:"PREV_PAGE",
+            payload:{
+                sold
+            }
         })
     }catch(err){
         console.log(err)
