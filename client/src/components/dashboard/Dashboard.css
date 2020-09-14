@@ -22,4 +22,13 @@
 
 .dashboard_second{
     padding: 15px;
+    display: flex;
+}
+
+.dashboard_second_pie{
+    flex: 0.4;
+}
+
+.dashboard_second_line{
+    flex: 0.5;
 }

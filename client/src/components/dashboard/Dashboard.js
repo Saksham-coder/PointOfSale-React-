@@ -2,11 +2,12 @@ import React,{useEffect} from 'react'
 import { connect } from 'react-redux'
 import  DashboardRevenue from './Dashboard/DashboardRevenue'
 import  DashboardData from './Dashboard/DashboardData'
+import DashboardDateTimedata from './Dashboard/DashboardDateTimedata'
 
 import {calculations} from './../../actions/product'
 import './Dashboard.css'
 
- const Dashboard = ({data, sold, calculations}) => {
+ const Dashboard = ({data, sold, calculations, receipt}) => {
 
     useEffect(()=> {
         calculations({data, sold})
@@ -23,14 +24,23 @@ import './Dashboard.css'
                     <DashboardRevenue />
                 </div>
                 <div className='dashboard_second'>
-                {
-                        data.swiggy ? <DashboardData />
-                        :
-                        <p>Loading</p>
-                }
+                    <div className='dashboard_second_pie'>
+                        {
+                                data.swiggy ? <DashboardData />
+                                :
+                                <p>Loading</p>
+                        }
+                    </div>
+                    <div className='dashboard_second_line'>
+                        {
+                                receipt ? <DashboardDateTimedata />
+                                :
+                                <p>Loading</p>
+                        }  
+                    </div>
                 </div>
                 <div className='dashboard_third'>
-
+                
                 </div>
             </div>
         </div>
@@ -39,7 +49,8 @@ import './Dashboard.css'
 
 const mapStateToProps = (state) => ({
     data: state.dashboard,
-    sold: state.auth.user.sold
+    sold: state.auth.user.sold,
+    receipt : state.receipt.receipt
 })
 
 

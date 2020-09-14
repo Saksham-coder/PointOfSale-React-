@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Chart from "react-apexcharts";
 
-export const DashboardData = ({pricedata}) => {
+const DashboardData = ({pricedata}) => {
     console.log(pricedata)
 
     const {swiggy, zomato, foodpanda, store} = pricedata
