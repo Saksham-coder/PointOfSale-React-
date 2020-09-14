@@ -6,7 +6,7 @@ export const loadUser = () => async dispatch => {
         const id = localStorage.getItem('x-auth-token');
       const res = await axios.get(`/api/v1/users/${id}`
   );
-      console.log(res)
+      console.log(res) 
       dispatch({
         type: "USER_LOADED",
         payload: res.data
@@ -15,6 +15,7 @@ export const loadUser = () => async dispatch => {
           type:"PRODUCT_LOADED",
           payload: res.data
       })
+      console.log(res.data) 
       dispatch({
           type:"PRODUCTS_LOADED",
           payload: res.data

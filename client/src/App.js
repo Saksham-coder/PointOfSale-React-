@@ -12,6 +12,7 @@ import Receipts from './components/dashboard/Receipts'
 import Dashboard from './components/dashboard/Dashboard'
 import Products from './components/dashboard/Products'
 import Navbar from './components/Navbar'
+import AddProduct from './components/dashboard/Product/AddProduct'
 import Finalsell from './components/dashboard/Sell/Finalsell'
 import ProductDetail from './components/dashboard/Product/ProductDetail'
 import ReceiptDetail from './components/dashboard/Receipt/ReceiptDetail'
@@ -42,6 +43,7 @@ const  App= () => {
                 <PrivateRoute exact path="/app/receipts" component={Receipts} />
                 <PrivateRoute exact path="/app/dashboard" component={Dashboard} />
                 <PrivateRoute exact path="/app/products" component={Products} />
+                <PrivateRoute exact path="/app/product/addProduct" component={AddProduct} />
                 <PrivateRoute exact path="/app/products/:id" component={ProductDetail} />
                 <PrivateRoute exact path="/app/receipts/:id" component={ReceiptDetail} />
             </div>

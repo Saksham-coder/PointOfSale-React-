@@ -1,0 +1,13 @@
+.addproduct_card{
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.addproduct_card_single{
+    flex: 0.2;
+}
+
+.addproduct_card_main{
+    display: flex;
+}

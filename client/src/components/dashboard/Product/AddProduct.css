@@ -1,0 +1,15 @@
+.addproduct{
+    flex: 1;
+    background-color: #EBEEF0;
+}
+
+.addproduct_heading{
+    background-color: white;
+    padding:15px;
+    color: #808080;
+}
+
+.addproduct_base{
+    flex: 1;
+    padding: 15px;
+}

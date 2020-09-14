@@ -9,8 +9,9 @@ import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 export const ProductDisplay = ({products, ordering, changeOrder,auth ,count ,  singleProductDetail}) => {
 
     useEffect(()=> {
-        changeOrder(products, ordering)
-    },[auth])
+        console.log("Checking in product display that product receive", products)
+        changeOrder(auth.user.products, ordering)
+    },[auth]) 
 
     const order = () => {
         console.log("Change in asc. or desc. order", products)

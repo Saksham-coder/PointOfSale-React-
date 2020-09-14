@@ -8,6 +8,20 @@
     padding: 15px;
 } */
 
+.product_heading{
+    display: flex;
+    justify-content: space-between;
+}
+
+.product_heading a{
+    background-color: #41AD6A;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+
 .product_base_search{
     display: flex;
     align-items: center;
