@@ -15,10 +15,10 @@ const DashboardDateTimedata = ({data}) => {
 
     data.map(d => {
       if (d.date){
-        console.log(d)
-        console.log(todayDate.split(" ")[0] , d.date.split(',')[0])
+        // console.log(d)
+        // console.log(todayDate.split(" ")[0] , d.date.split(',')[0])
         if (todayDate.split(",")[0] === d.date.split(',')[0]){
-            console.log("matched")
+            // console.log("matched")
             time.push(d.date.split(',')[1])
             total.push(parseInt(d.total))
         }
@@ -26,7 +26,7 @@ const DashboardDateTimedata = ({data}) => {
       
     })
 
-    console.log("data that will be mapped",time, total)
+    // console.log("data that will be mapped",time, total)
 
     _.reverse(time)
     _.reverse(total)

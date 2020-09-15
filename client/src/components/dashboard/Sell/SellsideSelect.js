@@ -18,12 +18,23 @@ const SellsideSelect = ({list, products, filtering2, filtering3}) => {
         filtering2({ category:e.target.innerText ,products})
     }
 
+    let cleanData = []
+
+    // var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    // var n = fruits.includes("Mango");
+
     return (
         <div className='sellsideselect'>
             <p onClick={filterall}>All</p>
             {
                 list.map(single => {
-                    return <p onClick={filterall2} >{ single.category}</p>
+                    console.log(cleanData)
+                    console.log(cleanData.includes(single.category))
+                    if (!cleanData.includes(single.category)){
+                        cleanData.push(single.category)
+                        return <p onClick={filterall2} >{ single.category}</p>
+                    }
+                    
                 })
             }
         </div>

@@ -44,7 +44,7 @@ export const ReceiptDetail = (props) => {
                     {
                         items ?
                         items.map(i => {
-                            return  <ReceiptDetailCard detail={i.detail}  quantity={i.quantity} price={i.price} />
+                            return  <ReceiptDetailCard detail={i.details}  quantity={i.quantity} price={i.price} />
                         })
                        :
                        <p>Loading</p>

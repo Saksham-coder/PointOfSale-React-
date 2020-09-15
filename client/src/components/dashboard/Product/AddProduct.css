@@ -11,5 +11,54 @@
 
 .addproduct_base{
     flex: 1;
+    margin: 15px;
     padding: 15px;
+    background-color: white;
 }
+
+.addproduct_card{
+    padding: 10px 0;
+}
+
+.addproduct_card_single p{
+    font-size: 15px;
+}
+
+.addproduct_card_single input{
+    height: 20px;
+    border-top: 2px solid #EBEEF0;
+    border-left: 2px solid #EBEEF0;
+    border-right: 1px solid #EBEEF0;
+    border-bottom: 1px solid #EBEEF0;
+}
+
+.addproduct_bottom{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.addproduct_bottom a{
+    text-decoration: none;
+    background-color: #EBEEF0;
+    border: 1px solid black;
+    margin-right: 10px;
+    margin-left: 20px;
+    color: black;
+    padding: 5px;
+    font-size: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.addproduct_bottom button{
+    background-color: #41AD6A;
+    border: 1px solid black;
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 15px;
+    cursor: pointer;
+    color: white;
+}
+

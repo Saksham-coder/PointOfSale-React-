@@ -13,6 +13,7 @@ import './Dashboard.css'
         calculations({data, sold})
     },[sold])
 
+    console.log(data, sold, calculations, receipt)
 
     return (
         <div className='dashboard'>
@@ -26,7 +27,7 @@ import './Dashboard.css'
                 <div className='dashboard_second'>
                     <div className='dashboard_second_pie'>
                         {
-                                data.swiggy ? <DashboardData />
+                                data.swiggy|| data.zomato|| data.foodpanda ||data.store ? <DashboardData />
                                 :
                                 <p>Loading</p>
                         }

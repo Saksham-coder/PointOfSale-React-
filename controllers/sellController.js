@@ -2,7 +2,7 @@ const Sell = require('./../models/sellModel')
 
 exports.postSell = async(req, res) => {
     try{
-        // console.log(req.body)
+        console.log(req.body)
         const newSell = await Sell.create(req.body)
         console.log(newSell)
         res.status(201).json({

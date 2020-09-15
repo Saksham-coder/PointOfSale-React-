@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const sellSchema = new mongoose.Schema({
     items: [
         {
-           detail : String ,
+           details : String ,
            price: String,
            quantity: String
         }

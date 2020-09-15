@@ -41,7 +41,7 @@ export const ReceiptDisplay = ({sold,count,increasingPage,receipt, decreasingPag
                 receipt.map(s => {
                     return <ReceiptDisplayCard id={s._id}  number={s.receipt}  created={s.date} mobile={s.customer.phone} payment={s.revenue} total={s.total}  />
                 })
-                :
+                : 
                 <div>Loading</div>
             }
             <div className='receiptdisplay_button'>

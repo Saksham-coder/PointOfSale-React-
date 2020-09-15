@@ -2,6 +2,89 @@ import _ from 'lodash'
 import axios from 'axios'
 import {loadUser} from './auth'
 
+export const addProduct = ({productList, id}) => async dispatch => {
+    const config = {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
+
+    let newData = {}
+
+    try{
+        console.log("from action", productList, id)
+        productList.map(async product => {
+            if (product.checking === 'marked') {
+                newData.details = product.detail
+                newData.category = product.category     
+                newData.price = product.price
+                newData.User = id
+                console.log(newData)
+                let res = await axios.post("/api/v1/products",
+                newData,
+                config
+                )
+                console.log(res)
+            }  
+        })
+        dispatch(loadUser());
+    }catch(err){
+        console.log(err)
+    }
+}
+
+export const maintainingMark = ({serial, opposite}) => dispatch => {
+    try{
+        
+        dispatch({
+            type: "ADD_MARKING",
+                payload: {
+                    value:opposite ,
+                    serial:serial
+                }
+        })
+    }catch(err){
+        console.log(err)
+    }
+}
+ 
+export const addingProduct = ({serial, detail, value}) => dispatch => {
+    try{
+        console.log("From adding product action",serial, detail, value)
+        if (detail === 'category'){
+            dispatch({
+                type: "ADD_CATEGORY",
+                payload: {
+                    value:value ,
+                    serial:serial
+                }
+            })
+        }
+        if (detail === 'detail'){
+            dispatch({
+                type: "ADD_DETAIL",
+                payload: {
+                    value:value ,
+                    serial:serial
+                }
+            })
+        }
+        if (detail === 'price'){
+            dispatch({
+                type: "ADD_PRICE",
+                payload: {
+                    value:value ,
+                    serial:serial
+                }
+            })
+        }
+    }catch(err){
+        console.log(err)
+    }
+}
+
+
+
 export const filteringInProduct = ({propProduct, value}) => dispatch => {
     try{
         console.log("LEt me search in this==>>", propProduct, value)
