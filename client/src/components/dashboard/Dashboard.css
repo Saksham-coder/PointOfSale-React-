@@ -31,6 +31,14 @@
     padding-top: 30px;
 }
 
+.dashboard_second_pie p{
+    background-color:#F66359;
+    padding: 5px 10px;
+    color: white;
+}
+
+
+
 .dashboard_second_line{
     flex: 0.5;
 }

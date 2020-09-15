@@ -29,7 +29,7 @@ import './Dashboard.css'
                         {
                                 data.swiggy|| data.zomato|| data.foodpanda ||data.store ? <DashboardData />
                                 :
-                                <p>Loading</p>
+                                <p>! You dont have sale today to put in chart</p>
                         }
                     </div>
                     <div className='dashboard_second_line'>
