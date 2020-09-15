@@ -1,0 +1,58 @@
+.selldisplay{
+    background-color: #EBEEF0;
+    padding: 15px;
+}
+
+.selldisplay_heading{
+    font-size: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.selldisplay_item_heading{
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #989b9c;
+    display: flex;
+}
+
+.selldisplay_item_heading p{
+    flex: 3.33;
+    padding-left: 10px;
+}
+
+.selldisplaycard{
+    display: flex;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 0.5px solid #989b9c;
+}
+
+.selldisplaycard span{
+    flex: 3.33;
+    padding-left: 10px;
+}
+
+.selldisplaycard_button{
+    flex: 3.33;
+    padding-left: 10px;
+}
+
+.selldisplaycard_button button{
+    padding: 0 5px;
+    margin-left: 5px;
+}
+
+.selldisplay_charge{
+    flex: 1;
+    background-color: #358753;
+    text-align: center;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+.selldisplay_charge a{
+    text-decoration: none;
+    color: white;
+}

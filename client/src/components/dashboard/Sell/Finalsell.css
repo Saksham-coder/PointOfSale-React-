@@ -1,0 +1,85 @@
+.sellfinal_header{
+    background-color: white;
+    padding:15px;
+    color: #808080;
+}
+
+.sellfinal{
+    flex: 1;
+    background-color: #EBEEF0;
+    height: 100vh;
+}
+
+.sellfinal_base{
+    display: flex;
+    flex: 1;
+    background-color: white;
+    padding: 15px;
+}
+
+.sellfinal_base_left{
+    flex: 0.5;
+}
+
+.sellfinal_base_first,
+.sellfinal_base_second{
+    margin-bottom: 10px;
+}
+
+.sellfinal_base_first p,
+.sellfinal_base_second p{
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.sellfinal_base_button{
+    display: flex;
+}
+
+.sellfinal_base_button button{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    background-color: white;
+    border: 1px solid rgb(31, 30, 30);
+    margin-right: 10px;
+    padding: 0px 5px;
+    border-radius: 5px;
+}
+
+.sellfinal_base_button button svg{
+    color: #358753;
+}
+
+
+.sellfinal_base_third{
+    margin-top: 50px;
+}
+
+.sellfinal_base_third button{
+    padding: 10px;
+    background-color:#358753 ;
+    border: 1px solid rgb(31, 30, 30);
+    border-radius: 5px;
+    color: white;
+}
+
+
+.sellfinal_base_right{
+    flex: 0.5;
+}
+
+.sellfinal_base_current{
+    padding: 15px;
+}
+
+.sellfinal_current{
+    background-color: #c5cace ;
+}
+
+.sellfinal_current p{
+    padding: 10px;
+    background-color: white;
+    width: 60px;
+    font-weight: bold;
+}

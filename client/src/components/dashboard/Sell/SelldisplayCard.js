@@ -1,5 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import './Selldisplay.css'
+
 
 import {increase, decrease} from './../../../actions/profile'
 
@@ -16,12 +18,14 @@ const SelldisplayCard = ({detail, quantity, price, increase, decrease}) => {
     }
 
     return (
-        <div>
+        <div className='selldisplaycard'>
             <span>{detail}</span>
-            <button onClick={item2}>-</button>
-            <span>{quantity}</span>
-            <button onClick={item}>+</button>
-            <span>{price}</span>
+            <div className='selldisplaycard_button'>
+                <button onClick={item2}>-</button>
+                <span>{quantity}</span>
+                <button onClick={item}>+</button>
+            </div>
+            <span>₹{price}</span>
         </div>
     )
 }

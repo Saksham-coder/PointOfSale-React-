@@ -27,6 +27,8 @@
 
 .dashboard_second_pie{
     flex: 0.4;
+    padding-left: 50px;
+    padding-top: 30px;
 }
 
 .dashboard_second_line{

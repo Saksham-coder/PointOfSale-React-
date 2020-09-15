@@ -2,6 +2,7 @@ import React, {useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import Popper from '@material-ui/core/Popper';
+import './Selldisplay.css'
 
 import SelldisplayCard from './SelldisplayCard'
 import {totalling,customer} from './../../../actions/profile'
@@ -36,8 +37,16 @@ const Selldisplay = ({items, discountValue,totalling,distype, total, customer}) 
         }
     }
     return (
-        <div>
-            <div>
+        <div className='selldisplay'>
+            <div className='selldisplay_heading'>
+                <p>Current Sales</p>
+            </div>
+            <div className='selldisplay_item'>
+                <div className='selldisplay_item_heading'>
+                    <p>Item</p>
+                    <p>Quanity</p>
+                    <p>Price</p>
+                </div>
                 {
                     items.map(item => {
                     return <SelldisplayCard  detail={item.details} price={item.price} quantity={item.quantity} />
@@ -54,10 +63,12 @@ const Selldisplay = ({items, discountValue,totalling,distype, total, customer}) 
                 <label for="discount">Discount</label><br></br>
                 <input onChange={discount} type="number" id="discount" name="Discount" value={discountValue} />
             </div>
-            
-            <Link to='/app/sell/final'>
-                <p>Charge {total}</p>
-            </Link>
+            <div className='selldisplay_charge'>
+                <Link to='/app/sell/final'>
+                    <p>Charge ₹{total}</p>
+                </Link>
+
+            </div>
         </div>
     )
 }
