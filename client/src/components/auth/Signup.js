@@ -74,7 +74,7 @@ const Signup = ({ register }) => {
                         value={password2}
                         onChange={onChange} />
               </div>
-              <input type="submit" className="btn btn-primary" value="Login" />
+              <input type="submit" className="btn btn-primary" value="Signup" />
             </form>
             <p className="my-1">
               Already have an account? <Link to="/login">Login</Link>
