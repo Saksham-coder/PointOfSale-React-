@@ -25,6 +25,15 @@
     background-position: center;
 }
 
+.login_box_left_signup{
+    border-radius: 25px 0px 0px 25px;
+    background-color: white; 
+    flex: 0.4; 
+    background-image: url("https://crampete-staticfiles.s3.ap-south-1.amazonaws.com/blogs/Blog-140/Feature.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
 .login_box_right{
     border-radius: 0px 25px 25px 0px;
     background-color: white;   
@@ -58,7 +67,7 @@ text-align: center !important;
     border-radius: 5px;
     padding-left: 5px;
     width: 100%;
-
+    outline: none;
 }
 
 .form-group input:hover{
