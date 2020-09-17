@@ -17,7 +17,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import PinterestIcon from '@material-ui/icons/Pinterest';
 
 const Main = ({isAuthenticated}) => {
-    console.log(isAuthenticated)
+    // console.log(isAuthenticated)
     return (
             <div>
             {

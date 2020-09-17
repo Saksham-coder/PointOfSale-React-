@@ -11,7 +11,7 @@ import {filteringInProduct} from './../../actions/product'
  const Products = ({propProduct,filteringInProduct}) => {
 
     const change = (e) => {
-        console.log(e.target.value)
+        // console.log(e.target.value)
         filteringInProduct({propProduct, value:e.target.value})
     } 
 

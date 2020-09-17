@@ -12,7 +12,7 @@ export const ReceiptDetail = (props) => {
 
     const { date, receipt, revenue, discount, distype, customer, items, total } = props.receipt
 
-    console.log(date, receipt,revenue, discount, distype, customer, items, total)
+    // console.log(date, receipt,revenue, discount, distype, customer, items, total)
 
     return (
         <div className='receiptdetail'>
@@ -52,7 +52,7 @@ export const ReceiptDetail = (props) => {
                     <div className='receiptdetail_base_right_fourth'> 
                         <p>Subtotal</p>
                         {
-                            {discount} ? <span>₹ {discount}</span>
+                            {discount} ? <span>₹ {discount+total}</span>
                             :
                             <span> - </span>
                         }

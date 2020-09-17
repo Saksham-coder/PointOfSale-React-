@@ -12,3 +12,50 @@
   height: 100vh;
   /* padding: 90px; */
 }
+
+.alert{
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  /* padding: 0.8rem; */
+  margin: 1rem 0;
+  opacity: 0.9;
+  background: var(--light-color);
+  color: #fff;
+}
+
+.alert-primary{
+  background: var(--primary-color);
+}
+
+.alert-light{
+  background: var(--light-color);
+  color: #333;
+}
+
+.alert-dark{
+  background: var(--dark-color);
+  color: #fff;
+}
+
+.alert-danger{
+  width: 20%;
+  transform: translateX(160%);
+  background-color: #F44336;
+  /* background: var(--danger-color); */
+  padding: 10px 20px;
+  color: white;
+}
+
+.alert-success{
+  width: 20%;
+  transform: translateX(160%);
+  background: var(--success-color);
+  padding: 10px 20px;
+  color: white;
+  background-color: #5EBA7D;
+
+}
+
+

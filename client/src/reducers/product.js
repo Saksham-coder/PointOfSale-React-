@@ -53,7 +53,7 @@ export default function(state= initialState, action){
                     )
             }
         case "ADD_CATEGORY":
-            console.log("payload", payload)
+            // console.log("payload", payload)
                 return {
                     ...state,
                     productList: state.productList.map( product => product.tag === payload.serial ?
@@ -78,14 +78,14 @@ export default function(state= initialState, action){
                         )
                 }
         case "PRODUCTS_LOADED":
-            console.log("Payload that i will receive here==>>>",payload)
+            // console.log("Payload that i will receive here==>>>",payload)
             return{
                 ...state, 
                 products:payload.products,
                 ordering: state.ordering === 'desc' ? "asc" : "desc"
             }
             case "LOAD_PRODUCT":
-                console.log(payload)
+                // console.log(payload)
                 return{
                     ...state,
                     singleproduct:payload.data

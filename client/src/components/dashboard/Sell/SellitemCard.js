@@ -7,7 +7,7 @@ import {pushing} from './../../../actions/profile'
 const SellitemCard = ({detail, price, pushing}) => {
 
     const push = () => {
-        console.log(detail, price)
+        // console.log(detail, price)
         pushing({detail, price})
     }
 

@@ -13,14 +13,14 @@ export default function(state= initialState, action){
 
     switch(type) {
         case "RECEIPT_LOADED":
-            console.log("payload for receipt ", payload)
+            // console.log("payload for receipt ", payload)
             newData =  _.reverse(payload)
-            console.log(state.count)
+            // console.log(state.count)
             let c = parseInt(state.count)
-            console.log(newData)
+            // console.log(newData)
             let filterData = JSON.parse(JSON.stringify(newData))
             filterData.splice(c)
-            console.log(filterData)
+            // console.log(filterData)
             return {
                 ...state,
                 receipt: filterData
@@ -38,12 +38,12 @@ export default function(state= initialState, action){
                 count: change
             } 
         case "PREV_PAGE":
-                console.log("From reducer",payload)
+                // console.log("From reducer",payload)
                 let change3 = parseInt(state.count) -10
                 let filterData3 = JSON.parse(JSON.stringify(payload.sold))
                 filterData3.splice(0, change3-10)
                 filterData3.splice(10)
-                console.log(filterData3)
+                // console.log(filterData3)
                 return {
                     ...state,
                     receipt: filterData3,

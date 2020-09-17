@@ -14,22 +14,22 @@ const Selldisplay = ({items, discountValue,totalling,distype, total, customer}) 
         items.map(item=> {
             total += item.price* item.quantity
         })
-        console.log("before discount applying", total)
-        console.log(typeof(distype), typeof(total), typeof(discountValue))
+        // console.log("before discount applying", total)
+        // console.log(typeof(distype), typeof(total), typeof(discountValue))
         if (distype === 'Percentage' && discountValue){
-            total -= parseInt(discountValue) * 0.01
+            total -= (parseInt(discountValue)/100)  * total
         }
         if (distype === 'Value' && discountValue){
             total -= parseInt(discountValue) 
         }
-        console.log("after discount applying", total)
+        // console.log("after discount applying", total)
         totalling({total})
     },[items,discountValue,distype])
 
-    console.log(items)
+    // console.log(items)
 
     const discount = (e) => {
-        console.log(e.target.name, e.target.value)
+        // console.log(e.target.name, e.target.value)
         if (e.target.name === 'Discount'){
             customer({discount:e.target.value})
         }else{

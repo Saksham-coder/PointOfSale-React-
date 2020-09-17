@@ -9,7 +9,7 @@ export const postingfinal = (profile,userId) =>async dispatch => {
         const d =  new Date().toLocaleString()
         profile.User =  userId
         profile.date = d
-        console.log(profile)
+        // console.log(profile)
         const config = {
             headers: {
                 'Content-Type': 'application/json'
@@ -23,10 +23,10 @@ export const postingfinal = (profile,userId) =>async dispatch => {
             config
         )
 
-        console.log(res) 
-        console.log("user loaded ")
+        // console.log(res) 
+        // console.log("user loaded ")
         dispatch(loadUser())
-        console.log("did user loaded ")
+        // console.log("did user loaded ")
         // <Redirect to = "/app/sell" />s
         // history.pushState('/app')
         // if (res.data.status === 'success'){
@@ -96,7 +96,7 @@ try{
 
 export const customer = ({paymentType,revenue,distype,discount,name,phone,email,address,city,pincode}) => dispatch => {
     try{
-        console.log("From action customer====>>>",paymentType,revenue,distype,discount,name,phone,email,address,city,pincode)
+        // console.log("From action customer====>>>",paymentType,revenue,distype,discount,name,phone,email,address,city,pincode)
         if (address){
             dispatch({
                 type:'ADD_CUSTOMERDETAIL',

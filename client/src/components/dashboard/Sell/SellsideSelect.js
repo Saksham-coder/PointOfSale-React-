@@ -8,12 +8,12 @@ import {filtering2, filtering3} from './../../../actions/auth'
 const SellsideSelect = ({list, products, filtering2, filtering3}) => {
 
     const filterall = () => {
-        console.log(products)
+        // console.log(products)
         filtering3({products})
     }
 
     const filterall2 = (e) => {
-        console.log(e.target.innerText)
+        // console.log(e.target.innerText)
 
         filtering2({ category:e.target.innerText ,products})
     }
@@ -28,8 +28,8 @@ const SellsideSelect = ({list, products, filtering2, filtering3}) => {
             <p onClick={filterall}>All</p>
             {
                 list.map(single => {
-                    console.log(cleanData)
-                    console.log(cleanData.includes(single.category))
+                    {/* console.log(cleanData) */}
+                    {/* console.log(cleanData.includes(single.category)) */}
                     if (!cleanData.includes(single.category)){
                         cleanData.push(single.category)
                         return <p onClick={filterall2} >{ single.category}</p>

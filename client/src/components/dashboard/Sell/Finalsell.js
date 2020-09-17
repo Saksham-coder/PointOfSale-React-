@@ -2,34 +2,51 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 import './Finalsell.css'
+import _ from 'lodash'
+import {setAlert} from './../../../actions/alert'
 
 import CheckIcon from '@material-ui/icons/Check';
 
 import FinalsellRight from './FinalsellRight'
 import {customer,postingfinal} from './../../../actions/profile'
 
-const Finalsell = ({paymentType,customer,userId,revenue,profile,postingfinal}) => {
+const Finalsell = ({paymentType,customer,userId,revenue,profile,postingfinal,items, setAlert}) => {
 
-    console.log(paymentType)
+    // console.log(paymentType)
 
     const payment = (e) => {
-        console.log("payment function")
-        console.log(e.target.name)
+        // console.log("payment function")
+        // console.log(e.target.name)
         customer({paymentType:e.target.name})
     }
 
     const rev = (e) => {
-        console.log(e.target.name)
+        // console.log(e.target.name)
         customer({revenue:e.target.name})
     }
 
     const final = () => {
-        postingfinal(profile,userId)
-
-        // if (isAuthenticated) {
-        //     return <Redirect to="/" />;
-        //   }
-    }
+        let finalVal = ''
+        let dummyVal = []
+        if (!paymentType){
+            dummyVal.push("·Payment_Type")
+        }
+        if(!revenue){
+            dummyVal.push("·Revenue_From")
+        }
+        if(items.length === 0){
+            dummyVal.push("·Items_Cart_Empty")
+        }
+        console.log(dummyVal)
+        finalVal = _.join(dummyVal, ' ')
+        console.log(finalVal)
+        if(finalVal){
+                setAlert(`Please Provide ${finalVal}`, 'danger')
+            }
+            else {
+                postingfinal(profile,userId)
+            }
+        }
 
     return (
         <div className='sellfinal'>
@@ -106,8 +123,9 @@ const mapStateToProps = (state) => ({
     paymentType:state.profile.customer.paymentType,
     revenue:state.profile.revenue,
     profile:state.profile,
-    userId:state.auth.user._id
+    userId:state.auth.user._id,
+    items:state.profile.items
 })
 
 
-export default connect(mapStateToProps, {customer,postingfinal})(Finalsell)
+export default connect(mapStateToProps, {customer,postingfinal, setAlert})(Finalsell)

@@ -11,20 +11,20 @@ export default function(state= initialState, action){
 
     switch(type) {
         case "LOGIN_SUCCESS":
-            console.log(payload)
+            // console.log(payload)
             return {
                 ...state,
                 isAuthenticated: true
             }
         case "USER_LOADED":
-            console.log("Loading user===>>", payload)
+            // console.log("Loading user===>>", payload)
             return {
                 ...state,
                 user: payload,
                 isAuthenticated: true
             }
         case "PRODUCT_LOADED":
-            console.log("pAuylod in product loading==>>", payload)
+            // console.log("pAuylod in product loading==>>", payload)
             return{
                 ...state,
                 copyProduct: payload.products,

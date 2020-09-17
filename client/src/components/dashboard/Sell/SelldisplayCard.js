@@ -25,7 +25,7 @@ const SelldisplayCard = ({detail, quantity, price, increase, decrease}) => {
                 <span>{quantity}</span>
                 <button onClick={item}>+</button>
             </div>
-            <span>₹{price}</span>
+            <span>₹{price*quantity}</span>
         </div>
     )
 }

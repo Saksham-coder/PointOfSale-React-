@@ -5,7 +5,7 @@ import './Productdisplay.css'
 
 
 export const ProductDisplayCard = ({id, detail, price, category,products}) => {
-    console.log("From product display card ", id, detail, price, category)
+    // console.log("From product display card ", id, detail, price, category)
 
     return (
         <div className='productdisplaycard'>

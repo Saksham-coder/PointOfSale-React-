@@ -19,11 +19,11 @@ export const ReceiptDisplay = ({sold,count,increasingPage,receipt, decreasingPag
     }
 
     const decreasePage = () => {
-        console.log(sold)
+        // console.log(sold)
         decreasingPage({sold})
     }
 
-    console.log("showing receipt==>>>", receipt)
+    // console.log("showing receipt==>>>", receipt)
 
     return (
         <div className='receiptdisplay'>

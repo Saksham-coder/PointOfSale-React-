@@ -16,7 +16,7 @@ export const AddProductCard = ({serial,detail,category,price,mark, addingProduct
     // const { card1 } = formData;
     
     const onChange2 = e =>{
-        console.log(serial, e.target.value )
+        // console.log(serial, e.target.value )
         let opposite
         opposite = e.target.value === 'marked' ? 'notMarked' : 'marked'
         console.log(opposite)
@@ -32,7 +32,7 @@ export const AddProductCard = ({serial,detail,category,price,mark, addingProduct
     };
 
     const changingProductData = (e) => {
-        console.log(serial, e.target.name, e.target.value)
+        // console.log(serial, e.target.name, e.target.value)
         addingProduct({serial, detail:e.target.name, value:e.target.value})
     }
     

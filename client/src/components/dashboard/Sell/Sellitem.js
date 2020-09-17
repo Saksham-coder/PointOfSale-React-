@@ -6,10 +6,10 @@ import SellitemCard from "./SellitemCard"
 import {filtering} from './../../../actions/auth'
 
 const Sellitem = ({products,copyProducts,filtering}) => {
-    console.log('Products in Sell item card==.>>>', products,copyProducts)
+    // console.log('Products in Sell item card==.>>>', products,copyProducts)
 
     const change = (e) => {
-        console.log(e.target.value)
+        // console.log(e.target.value)
         filtering({products, value:e.target.value})
     }
 
@@ -18,7 +18,7 @@ const Sellitem = ({products,copyProducts,filtering}) => {
             <div className="selliteminput">
                 <input
                     type="text"
-                    placeholder="Search Product"
+                    placeholder="Search Product ..."
                     name="searchProduct"
                     onChange={change}
                 />

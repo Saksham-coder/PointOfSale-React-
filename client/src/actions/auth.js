@@ -1,12 +1,13 @@
 import axios from 'axios'
 import _ from 'lodash'
+import {setAlert} from './alert'
 
 export const loadUser = () => async dispatch => {
     try {
         const id = localStorage.getItem('x-auth-token');
       const res = await axios.get(`/api/v1/users/${id}`
   );
-      console.log(res) 
+    //   console.log(res) 
       dispatch({
         type: "USER_LOADED",
         payload: res.data
@@ -15,7 +16,7 @@ export const loadUser = () => async dispatch => {
           type:"PRODUCT_LOADED",
           payload: res.data
       })
-      console.log(res.data) 
+    //   console.log(res.data) 
       dispatch({
           type:"PRODUCTS_LOADED",
           payload: res.data
@@ -36,7 +37,7 @@ export const loadUser = () => async dispatch => {
 
 export const login = (email, password) => async dispatch => {
 
-    console.log(email, password)
+    // console.log(email, password)
 
     const body = { email, password };
   
@@ -56,7 +57,7 @@ export const login = (email, password) => async dispatch => {
 
         localStorage.setItem('x-auth-token', res.data.token);
         // const res = await api.get('/auth');
-        console.log(res)
+        // console.log(res)
 
         dispatch({
             type: "LOGIN_SUCCESS",
@@ -66,30 +67,10 @@ export const login = (email, password) => async dispatch => {
         dispatch(loadUser());
 
     }catch(err){
-        console.log("error==>>>", err)
+        dispatch(setAlert('Email or Password is incorrect', 'danger'))
+        // console.log("error==>>>", err)
     }
 
-    // try {
-    //   const res = await api.post('/auth', body);
-  
-    //   dispatch({
-    //     type: LOGIN_SUCCESS,
-    //     payload: res.data
-    //   });
-  
-    //   dispatch(loadUser());
-    // } catch (err) {
-    //   const errors = err.response.data.errors;
-  
-    //   if (errors) {
-    //     errors.forEach(error => dispatch(setAlert(error.msg, 'danger')));
-    //   }
-  
-    //   dispatch({
-    //     type: LOGIN_FAIL
-    //   });
-//     }
-//   }
 }
 
 export const register = ({ name, email, password }) => async dispatch => {
@@ -108,7 +89,7 @@ export const register = ({ name, email, password }) => async dispatch => {
             config
 
         )
-        console.log(res)
+        // console.log(res)
         // dispatch({
         //     type: "REGISTER_SUCCESS",
         //     payload: res.data
@@ -116,7 +97,7 @@ export const register = ({ name, email, password }) => async dispatch => {
         // dispatch(loadUser());
     } catch (err) {
         const errors = err.response.data.errors;
-        console.log(errors)
+        // console.log(errors)
         dispatch({
             type: "REGISTER_FAIL"
         })
@@ -125,15 +106,15 @@ export const register = ({ name, email, password }) => async dispatch => {
 
  export const filtering = ({products, value}) => dispatch => {
     try{
-        console.log("LEt me search in this==>>", products, value)
+        // console.log("LEt me search in this==>>", products, value)
         let searched =[]
          products.map(product => { 
              if (product.details.indexOf(value) >= 0)
              {
-             console.log(product.details.indexOf(value) >= 0)
+            //  console.log(product.details.indexOf(value) >= 0)
             searched.push(product)
         }});
-        console.log(searched)
+        // console.log(searched)
         dispatch({
             type:"PRODUCT_LOADED",
             payload: {
@@ -147,14 +128,14 @@ export const register = ({ name, email, password }) => async dispatch => {
 
 export const filtering2 = ({category, products}) => dispatch => {
     try{
-        console.log("LEt me search in filter==>>", category, products)
+        // console.log("LEt me search in filter==>>", category, products)
         let searched =[]
          products.map(product => { 
              if (product.category === category)
              {
             searched.push(product)
         }});
-        console.log(searched)
+        // console.log(searched)
         dispatch({
             type:"PRODUCT_LOADED",
             payload: {
@@ -168,7 +149,7 @@ export const filtering2 = ({category, products}) => dispatch => {
 
 export const filtering3 = ({products}) => dispatch => {
     try{
-        console.log("LEt me search in filter all==>>", products)
+        // console.log("LEt me search in filter all==>>", products)
 
         dispatch({
             type:"PRODUCT_LOADED",

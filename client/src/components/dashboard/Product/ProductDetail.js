@@ -19,11 +19,11 @@ export const ProductDetail = (props) => {
     const { detail, category, price } = formData;
     
     const onChange = e =>{
-        console.log( e.target.name, e.target.value)
+        // console.log( e.target.name, e.target.value)
         setFormData({ ...formData, [e.target.name]: e.target.value });
     }   
     const onSubmit = e => {
-        console.log("Showing details before updating",detail, category, price)   
+        // console.log("Showing details before updating",detail, category, price)   
         props.updateSingleProductDetail({id:props.match.params.id,detail, category, price})
     };
     // console.log(props.match.params.id, props.products)

@@ -13,7 +13,7 @@ import './Dashboard.css'
         calculations({data, sold})
     },[sold])
 
-    console.log(data, sold, calculations, receipt)
+    // console.log(data, sold, calculations, receipt)
 
     return (
         <div className='dashboard'>

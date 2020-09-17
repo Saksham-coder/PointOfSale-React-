@@ -4,4 +4,9 @@
     border-right: 1px solid #EBEEF0;
     border-bottom: 1px solid #EBEEF0;
     /* text-transform: capitalize; */
+    cursor: pointer;
+}
+
+.sellsideselect p:hover{
+    background-color: #EBEEF0;
 }

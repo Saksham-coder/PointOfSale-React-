@@ -1,5 +1,5 @@
 const initialState = {
-    items: [{details:'milk', price:40, quantity:1},{details:'Tea', price:25, quantity:1}],
+    items: [],
     total:0,
     revenue:"",
     distype:0,
@@ -22,7 +22,7 @@ export default function(state= initialState, action){
         
         case "ADD_ITEM":
             const index = state.items.findIndex(el => el.details === payload.details)
-            console.log(index)
+            // console.log(index)
             if (index === -1){
                 return {
                 ...state,
@@ -55,7 +55,7 @@ export default function(state= initialState, action){
                 total: payload
             }
         case "ADD_CUSTOMERDETAIL":
-            console.log("PAYLOAD===>>>>",payload)
+            // console.log("PAYLOAD===>>>>",payload)
             if (payload.pay){
             return{
                 ...state,

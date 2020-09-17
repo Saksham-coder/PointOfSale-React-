@@ -4,7 +4,7 @@ import Chart from "react-apexcharts";
 import _ from "lodash"
 
 const DashboardDateTimedata = ({data}) => {
-    console.log(data)
+    // console.log(data)
 
     let time = []
     let total = []

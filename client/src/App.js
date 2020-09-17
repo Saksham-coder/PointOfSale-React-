@@ -20,6 +20,7 @@ import './App.css';
 import {connect} from 'react-redux'
 import PrivateRoute from './components/routing/PrivateRoute'
 import history from './components/history'
+import Alert from './components/Alert'
 
 
 
@@ -35,6 +36,7 @@ const  App= () => {
     <Provider store={store}>
     <BrowserRouter>
       <Router history={history}>
+        <Alert />
         <Switch>
           <div>
             <div>
